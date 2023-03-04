@@ -19,10 +19,11 @@ export default function Counter() {
     const randomNumber = Math.floor(Math.random()*10)
     setCount(randomNumber)
     return () => {
-      clearInterval(setCount(0))
+      setCount(0)
       setDynamicClass('text')
     }
   }, [])
+  
 
   // Third iteration
   useEffect(() => {
